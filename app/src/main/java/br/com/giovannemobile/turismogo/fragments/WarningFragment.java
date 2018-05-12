@@ -1,6 +1,8 @@
 package br.com.giovannemobile.turismogo.fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -27,7 +29,7 @@ public class WarningFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_warning, container, false);
 
-        EditText etDescription = (EditText) view.findViewById(R.id.etDescription);
+        final EditText etDescription = (EditText) view.findViewById(R.id.etDescription);
         final TextView tvCharCounter = (TextView) view.findViewById(R.id.tvCharCounter);
         tvCharCounter.setText(String.valueOf(0+"/"+getResources().getInteger(R.integer.description_max_length)));
 
@@ -49,6 +51,18 @@ public class WarningFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ((EditText) view.findViewById(R.id.etMyLocation)).setText("Centro de Convenções - Ilhéus");
+            }
+        });
+
+        view.findViewById(R.id.btSendWarn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Alerta enviado com sucesso")
+                        .setMessage("O seu alerta foi enviado diretamente para a secretaria responsável! ;)")
+                        .setPositiveButton("Ok", null)
+                        .create().show();
+
             }
         });
 

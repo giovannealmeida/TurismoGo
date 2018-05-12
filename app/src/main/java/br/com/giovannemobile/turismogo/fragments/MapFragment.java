@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import br.com.giovannemobile.turismogo.R;
 
-public class MapFragment extends Fragment implements OnMapReadyCallback {
+public class MapFragment extends Fragment {
 
     private GoogleMap mMap;
     private int PERMISSION_REQUEST = 1;
@@ -36,7 +36,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         MapView mMapView = view.findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
-        mMapView.onResume(); // needed to get the map to display immediately
+        mMapView.onResume();
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
@@ -73,29 +73,20 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     private void getLocation() {
-
         mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(-14.7855501,-39.0325091)).zoom(15).build();
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(-14.7855501, -39.0325091)).zoom(15).build();
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+        LatLng vesuvio = new LatLng(-14.7990243, -39.0326597);
+        LatLng catedral = new LatLng(-14.7993664, -39.0322974);
+        LatLng teatro = new LatLng(-14.7989926, -39.0327484);
+        LatLng bataclan = new LatLng(-14.7998747,-39.0332405);
+        LatLng jorge = new LatLng(-14.7986217,-39.0329582);
+        mMap.addMarker(new MarkerOptions().position(vesuvio).title("Bar Vesúvio"));
+        mMap.addMarker(new MarkerOptions().position(catedral).title("Catedral de São Sebastião"));
+        mMap.addMarker(new MarkerOptions().position(teatro).title("Teatro Municipal de Ilhéus"));
+        mMap.addMarker(new MarkerOptions().position(bataclan).title("Bataclan"));
+        mMap.addMarker(new MarkerOptions().position(jorge).title("Museu Casa de Jorge Amado"));
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    }
 }
