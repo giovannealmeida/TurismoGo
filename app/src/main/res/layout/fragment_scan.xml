@@ -23,14 +23,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:gravity="center"
-            android:text="Aponte o leitor para o QrCode"
-            android:textSize="24sp" />
+            android:text="Encontre e escaneie o Qr Code para saber a história deste lugar"
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/btScan"

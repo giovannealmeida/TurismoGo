@@ -33,22 +33,22 @@ public class DummyContent {
 
         switch (category) {
             case BAR_RESTAURANT:
-                list.add(new DummyPlace("1", "Barrakítika", R.drawable.barrakitika));
-                list.add(new DummyPlace("2", "Buteco do Posto", R.drawable.buteco_posto));
-                list.add(new DummyPlace("3", "Mar Aberto", R.drawable.mar_aberto));
+                list.add(new DummyPlace("1", "Barrakítika   [$$$] ", R.drawable.barrakitika));
+                list.add(new DummyPlace("2", "Buteco do Posto   [$$]", R.drawable.buteco_posto));
+                list.add(new DummyPlace("3", "Mar Aberto    [$$]", R.drawable.mar_aberto));
                 break;
             case BEACH:
-                list.add(new DummyPlace("1", "Cabana Gabriela", R.drawable.gabriela));
-                list.add(new DummyPlace("2", "Cabana Guarani", R.drawable.guarani));
-                list.add(new DummyPlace("3", "Cabana Soro Caseiro", R.drawable.soro_caseiro));
-                list.add(new DummyPlace("4", "Cabana Narigas", R.drawable.narigas));
+                list.add(new DummyPlace("1", "Cabana Gabriela   [$$]", R.drawable.gabriela));
+                list.add(new DummyPlace("2", "Cabana Guarani    [$]", R.drawable.guarani));
+                list.add(new DummyPlace("3", "Cabana Soro Caseiro   [$$]", R.drawable.soro_caseiro));
+                list.add(new DummyPlace("4", "Cabana Narigas    [$$$]", R.drawable.narigas));
                 break;
             case HOTEL:
-                list.add(new DummyPlace("1", "Aldeia da Praia", R.drawable.aldeia_praia));
-                list.add(new DummyPlace("2", "Barravento", R.drawable.barravento));
-                list.add(new DummyPlace("3", "Ilhéus Praia Hotel", R.drawable.ilheus_praia));
-                list.add(new DummyPlace("4", "Jardim Atlântico", R.drawable.jardim_atlantico));
-                list.add(new DummyPlace("5", "Pousada Praia do Sol", R.drawable.praia_sol));
+                list.add(new DummyPlace("1", "Aldeia da Praia   [$$$]", R.drawable.aldeia_praia));
+                list.add(new DummyPlace("2", "Barravento    [$$]", R.drawable.barravento));
+                list.add(new DummyPlace("3", "Ilhéus Praia Hotel    [$$$]", R.drawable.ilheus_praia));
+                list.add(new DummyPlace("4", "Jardim Atlântico  [$$$]", R.drawable.jardim_atlantico));
+                list.add(new DummyPlace("5", "Pousada Praia do Sol  [$$$]", R.drawable.praia_sol));
                 break;
         }
 

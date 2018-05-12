@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import br.com.giovannemobile.turismogo.fragments.GuideFragment;
 import br.com.giovannemobile.turismogo.fragments.MapFragment;
@@ -55,7 +56,14 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == IntentIntegrator.REQUEST_CODE) {
-            startActivity(new Intent(MainActivity.this,DetailActivity.class));
+            IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+            if (result != null) {
+                if (result.getContents() == null) {
+//                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+                } else {
+                    startActivity(new Intent(MainActivity.this,DetailActivity.class));
+                }
+            }
         }
     }
 

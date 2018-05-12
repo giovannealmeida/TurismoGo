@@ -5,7 +5,7 @@
     <string name="action_map">Mapa</string>
     <string name="action_warn">Alerta</string>
     <string name="action_scanner">Scanner</string>
-    <string name="message_warning">O que você deseja alertar?</string>
+    <string name="message_warning">Envie um alerta sobre algo chato que você viu</string>
     <string name="hint_description">Descrição</string>
     <string name="hint_where_r_u">Onde você está?</string>
 

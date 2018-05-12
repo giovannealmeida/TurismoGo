@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_services">
+        <item>Selecione uma categoria...</item>
+        <item>Transporte público</item>
+        <item>Mobilidade</item>
+        <item>Acessibilidade</item>
+        <item>Saneamento</item>
+        <item>Segurança</item>
+        <item>Comércio</item>
+    </string-array>
+</resources>
