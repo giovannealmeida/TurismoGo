@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".Splash"></activity>
         <activity android:name=".fragments.CaptureActivity" />
+        <activity android:name=".PlacesActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

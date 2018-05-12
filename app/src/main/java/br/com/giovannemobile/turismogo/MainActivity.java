@@ -5,18 +5,15 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import br.com.giovannemobile.turismogo.fragments.GuideFragment;
 import br.com.giovannemobile.turismogo.fragments.MapFragment;
+import br.com.giovannemobile.turismogo.fragments.PlacesCategoriesFragment;
 import br.com.giovannemobile.turismogo.fragments.ScanFragment;
 import br.com.giovannemobile.turismogo.fragments.WarningFragment;
 
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_places:
                     getSupportActionBar().setTitle(R.string.action_places);
-                    pushFragment(null);
+                    pushFragment(new PlacesCategoriesFragment());
                     return true;
                 case R.id.navigation_warn:
                     getSupportActionBar().setTitle(R.string.action_warn);

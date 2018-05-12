@@ -1,5 +1,7 @@
 package br.com.giovannemobile.turismogo.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,24 +9,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import br.com.giovannemobile.turismogo.R;
-import br.com.giovannemobile.turismogo.fragments.GuideFragment.OnListFragmentInteractionListener;
-import br.com.giovannemobile.turismogo.fragments.dummy.DummyContent.DummyItem;
-
 import java.util.List;
 
-public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
+import br.com.giovannemobile.turismogo.DetailActivity;
+import br.com.giovannemobile.turismogo.R;
+import br.com.giovannemobile.turismogo.fragments.dummy.DummyContent;
 
-    private final List<DummyItem> mValues;
+public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
 
-    public MyItemRecyclerViewAdapter(List<DummyItem> items) {
-        mValues = items;
+    Context context;
+
+    private final List<DummyContent.DummyPlace> mValues;
+
+    public PlacesAdapter(List<DummyContent.DummyPlace> mValues) {
+        this.mValues = mValues;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item, parent, false);
+                .inflate(R.layout.fragment_guide_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -46,7 +50,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
         public final TextView mIdView;
         public final TextView mContentView;
         public final ImageView ivImage;
-        public DummyItem mItem;
+        public DummyContent.DummyPlace mItem;
 
         public ViewHolder(View view) {
             super(view);
@@ -54,11 +58,6 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
             mIdView = (TextView) view.findViewById(R.id.id);
             mContentView = (TextView) view.findViewById(R.id.content);
             ivImage = (ImageView) view.findViewById(R.id.ivImage);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
         }
     }
 }

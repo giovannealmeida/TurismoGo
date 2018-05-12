@@ -13,9 +13,9 @@ import br.com.giovannemobile.turismogo.R;
 import br.com.giovannemobile.turismogo.fragments.dummy.DummyContent;
 import br.com.giovannemobile.turismogo.fragments.dummy.DummyContent.DummyPlace;
 
-public class GuideFragment extends Fragment {
+public class PlacesCategoriesFragment extends Fragment {
 
-    public GuideFragment() {
+    public PlacesCategoriesFragment() {
     }
 
     @Override
@@ -28,9 +28,9 @@ public class GuideFragment extends Fragment {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
 
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
-            recyclerView.setAdapter(new GuideAdapter(new DummyContent().getDummyHistoricalPlaces()));
+            recyclerView.setAdapter(new CategoryAdapter(context));
         }
         return view;
     }
