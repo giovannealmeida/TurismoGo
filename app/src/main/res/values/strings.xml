@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TurismoGO</string>
+    <string name="acion_guide">Guia</string>
+    <string name="action_places">Locais</string>
+    <string name="action_map">Mapa</string>
+    <string name="action_warn">Alerta</string>
+    <string name="action_scanner">Scanner</string>
+    <string name="message_warning">O que você deseja alertar?</string>
+    <string name="hint_description">Descrição</string>
+    <string name="hint_where_r_u">Onde você está?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="detail_text">
+        Nascido em 3 de dezembro de 1991 na cidade de Ilhéus, Giovanne é formado em Ciência da Computação pela UESC.
+        \n\nAtualmente atualmente é microeempreendedor individual autônomo atuando no ramo de desenvolvimento de aplicativos Android.
+        \n\nAlém de Java (linguagem nativa para desenvolvimento Android), possui experiência em C, C#, MySQL, Visual Basic, Ruby, PHP, Javascript e HTML.
+        \n\nAmante de tecnologia, jogos, gatos e sushi, Giovanne é eclético e tem um gosto musical bem abrangente apesar de parecer um headbanger discipulo de Baphomet.
+        \n\nNos momentos de lazer, é músico e gamer. É uma pessoa maravilhosa, para ninguém por defeitos. Um ótimo profissional, filho, amigo e <b>namorado</b>.
+        \n\n<b>TÁ SOLTEIRO - (73) 4002-8922</b>
+    </string>
+
+</resources>
